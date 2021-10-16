@@ -12,6 +12,7 @@ import { MusicPlayerPage } from '../music-player/music-player'
 })
 export class HomePage {
   public allMusic: any = [];
+  // public favoriteSongs: any = [];
 
   constructor(
     private socialSharing: SocialSharing,
@@ -84,6 +85,10 @@ export class HomePage {
     this.navCtrl.push(MusicPlayerPage, {
       music: music
     });
+  }
+
+  addToFavorites(music) {
+    this.musicProvider.addFavoriteSong(music);
   }
 
 }

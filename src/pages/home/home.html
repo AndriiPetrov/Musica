@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>All Music</ion-title>
+    <ion-title>All Songs</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -14,6 +14,10 @@
   </ion-refresher>
 
   <ion-card *ngFor="let music of allMusic">
+    <ion-card-header>
+      <button ion-button block (click)="addToFavorites(music)">Add to Favorites</button>
+    </ion-card-header>
+
     <img [src]="music.image" />
     <ion-card-content>
       <ion-card-title>{{music.name}}</ion-card-title>

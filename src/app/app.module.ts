@@ -11,7 +11,8 @@ import { MusicPlayerPage } from '../pages/music-player/music-player';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SocialSharing } from '@ionic-native/social-sharing';
-import { MediaPlugin } from '@ionic-native/media';
+import { Media } from '@ionic-native/media';
+import { File } from '@ionic-native/file';
 
 import { MusicProvider } from '../providers/music/music';
 
@@ -35,7 +36,8 @@ import { MusicProvider } from '../providers/music/music';
     MusicPlayerPage
   ],
   providers: [
-    MediaPlugin,
+    File,
+    Media,
     SocialSharing,
     StatusBar,
     SplashScreen,
